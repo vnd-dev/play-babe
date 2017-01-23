@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
-
 import { NavController, NavParams } from 'ionic-angular';
-
-import { ItemDetailsPage } from '../item-details/item-details';
 
 
 @Component({
-  selector: 'page-list',
-  templateUrl: 'list.html'
+  selector: 'learn-number',
+  templateUrl: 'learnNumber.tpl.html'
 })
-export class ListPage {
+export class LearnNumberPage {
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
@@ -29,11 +26,5 @@ export class ListPage {
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
     }
-  }
-
-  itemTapped(event, item) {
-    this.navCtrl.push(ItemDetailsPage, {
-      item: item
-    });
   }
 }

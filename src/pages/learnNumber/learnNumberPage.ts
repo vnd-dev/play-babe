@@ -14,20 +14,23 @@ export class LearnNumberPage {
     this.reset();
   }
 
+  public get numberOfCharInCurrentNumber(): number {
+    return this.currentNumber.toString().length;
+  }
+
   public nextNumberRequested(): void {
     ++this.previousNumber;
     ++this.currentNumber;
     ++this.nextNumber;
   }
 
-
   public previousNumberRequested(): void {
-    if(this.currentNumber < 1)
+    if (this.currentNumber < 1)
       return;
 
-      --this.nextNumber;
-      --this.currentNumber;
-      --this.previousNumber;
+    --this.nextNumber;
+    --this.currentNumber;
+    --this.previousNumber;
   }
 
   public reset(): void {

@@ -1,6 +1,6 @@
 <ion-content class="baby-main-number-content">
   <div (click)="nextNumberRequested();" class="baby-main-number-container">
-    <span class="baby-main-number">{{currentNumber}}</span>
+    <span class="baby-main-number" [ngStyle]="{'font-size': 100/numberOfCharInCurrentNumber + 'vw'}">{{currentNumber}}</span>
   </div>
 </ion-content>
 

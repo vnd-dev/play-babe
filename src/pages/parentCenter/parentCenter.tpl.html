@@ -5,8 +5,8 @@
             <ion-input type="text" [(ngModel)]="name"></ion-input>
         </ion-item>
         <ion-item>
-            <ion-label stacked>Age</ion-label>
-            <ion-input type="text" [(ngModel)]="age"></ion-input>
+            <ion-label stacked>Date of Birth</ion-label>
+            <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="dob"></ion-datetime>
         </ion-item>
         <ion-list radio-group [(ngModel)]="gender" margin-top>
             <ion-item>

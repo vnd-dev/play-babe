@@ -9,7 +9,7 @@ import { Loading } from 'ionic-angular'
 })
 export class ParentCenterPage{
     public name:string;
-    public age:number;
+    public dob:Date;
     public gender:string;
     
 
@@ -20,7 +20,7 @@ export class ParentCenterPage{
     public onSaveClicked(){
         const loader = this.createLoader("Saving Details");
         loader.present();
-        this.storage.set("babyDetails", {name:this.name, age:this.age, gender:this.gender}).then(()=>{
+        this.storage.set("babyDetails", {name:this.name, dob:this.dob, gender:this.gender}).then(()=>{
             loader.dismiss();
         });;
     }  
@@ -32,7 +32,7 @@ export class ParentCenterPage{
             if(!details)
                 return;
             this.name = details.name;
-            this.age = details.age;
+            this.dob = details.dob;
             this.gender = details.gender;  
             loader.dismiss();
         }, (err)=> console.log(err));

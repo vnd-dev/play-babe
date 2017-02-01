@@ -1,0 +1,26 @@
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>Name</ion-label>
+            <ion-input type="text" [(ngModel)]="name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Age</ion-label>
+            <ion-input type="text" [(ngModel)]="age"></ion-input>
+        </ion-item>
+        <ion-list radio-group [(ngModel)]="gender" margin-top>
+            <ion-item>
+                <ion-label fixed>Boy</ion-label>
+                <ion-radio value="boy"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Girl</ion-label>
+                <ion-radio color="danger" value="girl"></ion-radio>
+            </ion-item>
+        </ion-list>
+    </ion-list>
+    
+    <div padding>
+        <button ion-button color="primary" block>Save</button>
+    </div>
+</ion-content>   

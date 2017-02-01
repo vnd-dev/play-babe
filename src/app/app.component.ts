@@ -3,6 +3,7 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { LearnNumberPage } from '../pages/learnNumber/learnNumberPage';
+import { ParentCenterPage } from '../pages/parentCenter/parentCenterPage';
 
 
 @Component({
@@ -22,7 +23,8 @@ export class TeachBabyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Learn Number', component: LearnNumberPage }
+      { title: 'Learn Number', component: LearnNumberPage },
+      { title: 'Parent Center', component: ParentCenterPage }
     ];
   }
 

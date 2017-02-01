@@ -1,3 +1,63 @@
+$baby-default-bg: lightcoral;
+$baby-default-fg: black;
+
 .learn-number {
-    background: rosybrown;
+  background: rosybrown;
+}
+
+.baby-main-number-content{
+  bottom: 5em;
+  height: auto;
+}
+
+.baby-main-number-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+}
+
+.baby-main-number{
+  font-size: 30em;
+  width: 100%;
+  font-family: baby-font-family;
+}
+
+.baby-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.baby-nav-buttons-container {
+  display: flex;
+  height: 5em;
+  align-items: center;
+}
+
+.baby-nav-button {
+  height: 100%;
+  margin: 0;
+  background: $baby-default-bg;
+  color: $baby-default-fg;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.baby-previous-number {
+  flex: 1 1 0;
+  border-top-right-radius: 40px;
+}
+
+.baby-home {
+  //background: red;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.baby-next-number {
+  flex: 1 1 0;
+  border-top-left-radius: 40px;
 }

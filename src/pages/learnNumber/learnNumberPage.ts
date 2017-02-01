@@ -1,30 +1,38 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
 
 @Component({
   selector: 'learn-number',
   templateUrl: 'learnNumber.tpl.html'
 })
+
 export class LearnNumberPage {
-  selectedItem: any;
-  icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+  public currentNumber: number;
+  public previousNumber: number;
+  public nextNumber: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
+  constructor() {
+    this.reset();
+  }
 
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
+  public nextNumberRequested(): void {
+    ++this.previousNumber;
+    ++this.currentNumber;
+    ++this.nextNumber;
+  }
 
-    this.items = [];
-    for(let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
+
+  public previousNumberRequested(): void {
+    if(this.currentNumber < 1)
+      return;
+
+      --this.nextNumber;
+      --this.currentNumber;
+      --this.previousNumber;
+  }
+
+  public reset(): void {
+    this.currentNumber = 0;
+    this.previousNumber = -1;
+    this.nextNumber = 1;
   }
 }

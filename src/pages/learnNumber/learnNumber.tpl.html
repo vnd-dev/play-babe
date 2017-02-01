@@ -1,15 +1,21 @@
-<ion-content padding>
-  <div>testing here the game...!!</div>
-  <div>testing here the game...!!</div>
-
-  <div>testing here the game...!!</div>
-  <div>testing here the game...!!</div>
-  <div>testing here the game...!!</div>
-  <div>testing here the game...!!</div>
-  <div>testing here the game...!!</div>
-  <div>testing here the game...!!</div>
-  <div>testing here the game...!!</div>
-  <div>testing here the game...!!</div>
-  <div>testing here the game...!!</div>
-  <div>testing here the game...!!</div>
+<ion-content class="baby-main-number-content">
+  <div (click)="nextNumberRequested();" class="baby-main-number-container">
+    <span class="baby-main-number">{{currentNumber}}</span>
+  </div>
 </ion-content>
+
+<div class="baby-footer baby-nav-buttons-container">
+  <button clear ion-button icon-left [disabled]="previousNumber < 1" class="baby-nav-button baby-previous-number dev-font-size-medium" (click)="previousNumberRequested();">
+              <ion-icon *ngIf="previousNumber > 0" name="arrow-dropleft"></ion-icon>
+              <span>{{previousNumber < 1 ? '-' : previousNumber}}</span>
+            </button>
+
+  <button clear ion-button class="baby-nav-button baby-home dev-font-size-medium" (click)="reset();">
+              <ion-icon name="home"></ion-icon>
+            </button>
+
+  <button clear ion-button icon-right class="baby-nav-button baby-next-number dev-font-size-medium" (click)="nextNumberRequested();">
+              <span>{{nextNumber}}</span>
+              <ion-icon name="arrow-dropright"></ion-icon>
+            </button>
+</div>

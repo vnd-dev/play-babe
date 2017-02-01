@@ -14,3 +14,25 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.scroll-content{
+    overflow-y: auto;
+}
+
+.dev-font-size-medium{
+    //font-size: 3em;
+}
+
+.button-inner{
+  font-size: 2em;
+}
+
+@font-face
+{
+  font-family: baby-font-family;
+  src: url('../assets/baby-font.TTF')
+}
+
+.baby-font{
+  //font-family: baby-font-family;
+}

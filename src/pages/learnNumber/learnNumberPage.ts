@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MediaPlugin } from 'ionic-native';
+import {Platform} from "ionic-angular/index";
 
 @Component({
   selector: 'learn-number',
@@ -37,5 +39,10 @@ export class LearnNumberPage {
     this.currentNumber = 0;
     this.previousNumber = -1;
     this.nextNumber = 1;
+  }
+
+  public playSound() {
+    const file = new MediaPlugin("/android_asset/www/assets/sound/sample.mp3");
+    file.play();
   }
 }

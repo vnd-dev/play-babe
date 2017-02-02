@@ -23,8 +23,7 @@ export class TeachBabyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Learn Number', component: LearnNumberPage },
-      { title: 'Parent Center', component: ParentCenterPage }
+      { title: 'Learn Number', component: LearnNumberPage }      
     ];
   }
 

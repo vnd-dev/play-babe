@@ -29,13 +29,17 @@ export class ParentCenterPage{
         const loader = this.createLoader("Fetching Details");
         loader.present();
         this.storage.get("babyDetails").then((details)=>{
+            loader.dismiss();
             if(!details)
                 return;
             this.name = details.name;
             this.dob = details.dob;
             this.gender = details.gender;  
+            //loader.dismiss();
+        }, (err)=> {
+            console.log(err);
             loader.dismiss();
-        }, (err)=> console.log(err));
+        });
     }  
 
     private createLoader(content:string):Loading{

@@ -2,6 +2,7 @@
   <div (click)="nextNumberRequested();" class="baby-main-number-container">
     <span class="baby-main-number" [ngStyle]="{'font-size': 100/numberOfCharInCurrentNumber + 'vw'}">{{currentNumber}}</span>
   </div>
+  <button (click)="playSound()">Play Sound</button>
 </ion-content>
 
 <div class="baby-footer baby-nav-buttons-container">
